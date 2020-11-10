@@ -17,5 +17,5 @@ install:
   
 build_script:
   - echo --- Build -------------------------------------------------
-  - pip show lxml
+  - pip show lxml --no-python-version-warning || echo 0
   - scons
