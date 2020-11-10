@@ -2,10 +2,14 @@ version: "{build}"
 
 clone_depth: 100
 
+image:
+- Visual Studio 2017
+- Ubuntu
+
 install:
   - python --version
   - python -m pip install scons
-  - python -m pip install lxml
+  - #python -m pip install lxml
   
 build_script:
   - echo --- Build -------------------------------------------------
