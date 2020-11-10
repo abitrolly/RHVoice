@@ -8,8 +8,9 @@ image:
 
 install:
   - python --version
-  - pip install --upgrade pip
-  - pip install scons
+  # Windows needs python -m prefix to upgrade pip
+  - python -m pip install --upgrade pip
+  - python -m pip install scons
   - #python -m pip install lxml
   
 build_script:
