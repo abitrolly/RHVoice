@@ -13,9 +13,7 @@ install:
   # Linux needs PATH adjustments
   - sh: export PATH="$PATH:/home/appveyor/.local/bin"
   - pip install scons
-  - #python -m pip install lxml
   
 build_script:
   - echo --- Build -------------------------------------------------
-  - pip show lxml --no-python-version-warning || echo 0
   - scons
