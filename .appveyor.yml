@@ -3,14 +3,15 @@ version: "{build}"
 clone_depth: 100
 
 image:
-- Visual Studio 2017
+- Visual Studio 2015
 - Ubuntu
 
 install:
   - python --version
-  - python -m pip install scons
+  - pip install --upgrade pip
+  - pip install scons
   - #python -m pip install lxml
   
 build_script:
   - echo --- Build -------------------------------------------------
-  - scons
+  - python -m scons
