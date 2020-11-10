@@ -17,5 +17,5 @@ install:
   
 build_script:
   - echo --- Build -------------------------------------------------
-  - python -c 'import importlib as i; i.util.find_spec("lxml") or print("`lxml` not installed")'
+  - pip show lxml
   - scons
